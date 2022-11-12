@@ -88,7 +88,7 @@ namespace Invector.vCharacterController
         private void OnDead(GameObject arg0)
         {
             ShowText("You are Dead!");
-            MenuController.playerDead = true;
+            MenuController.playerDead = true;       //sets player death status to call death menu on MenuController script
         }
 
         public virtual void UpdateHUD(vThirdPersonController cc)

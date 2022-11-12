@@ -1314,9 +1314,7 @@ MonoBehaviour:
       _node: {fileID: 2213124743475263861}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Spawnable
-        node: {fileID: 2887434866160240386}
+      connections: []
       _direction: 1
       _dynamic: 0
   referenceMode: 1
@@ -1448,9 +1446,7 @@ MonoBehaviour:
       _node: {fileID: 2887434866160240386}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Spawnable
-        node: {fileID: 2213124743475263861}
+      connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnCount

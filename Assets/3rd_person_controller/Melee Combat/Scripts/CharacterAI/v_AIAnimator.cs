@@ -211,7 +211,10 @@ namespace Invector.vCharacterController.AI
             {
                 onActiveRagdoll.Invoke(null);
                 RemoveComponents();
-            }                
+            }   
+
+            //JAYDEN: test call her to UIcontroller script to increment score counter on enemy death!
+            //Invector.ScoreController.scoreCounter += 10;             
         }
 
         private void DeathBehaviour()

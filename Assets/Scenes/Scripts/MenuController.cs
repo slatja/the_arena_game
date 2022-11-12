@@ -50,6 +50,7 @@ namespace Invector
 			}
 		}
 		
+		//resets pause state, removes pause menu and relocks cursor
 		public void ResumeGame()
 		{
 			isPaused = false;
@@ -59,6 +60,7 @@ namespace Invector
 			Cursor.visible = false;
 		}
 		
+		//unpaused game, resets player death status and loads mainmenu scene
 		public void ReturnToMain()
 		{
 			Time.timeScale = 1f;
@@ -66,6 +68,7 @@ namespace Invector
 			playerDead = false;
 		}
 
+		//reloads game scene (kingshalls), removes player death status and removes death menu
 		public void NewGame()
 		{
 			SceneManager.LoadScene(NewGameScene);

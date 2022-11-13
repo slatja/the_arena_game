@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8719320570754748323
+--- !u!114 &-9123639034248379809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,74 +13,336 @@ MonoBehaviour:
   m_Name: Wave Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 904, y: 392}
+  position: {x: 2808, y: 1336}
   ports:
     keys:
     - In
     - Out
     values:
     - _fieldName: In
-      _node: {fileID: -8719320570754748323}
+      _node: {fileID: -9123639034248379809}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Out
-        node: {fileID: -5034862419630732384}
+      - fieldName: False
+        node: {fileID: -1855027094981007429}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: -8719320570754748323}
+      _node: {fileID: -9123639034248379809}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 7975216893413157738}
+        node: {fileID: 8000607521457006851}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: Start Wave
+--- !u!114 &-9089876296388296686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
+  m_Name: Wave Spawnable Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1480, y: 1496}
+  ports:
+    keys:
+    - Spawnable
+    values:
+    - _fieldName: Spawnable
+      _node: {fileID: -9089876296388296686}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 4782164456187820110}
+      _direction: 1
+      _dynamic: 0
+  referenceMode: 1
+  referenceTag: Boss
+  referenceName: Demon
+  referenceID: 0
+  Spawnable: {fileID: 0}
+--- !u!114 &-8682737574064531727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7980dabfbd9598643807b02cfc68cd0f, type: 3}
+  m_Name: Wave Loop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1784, y: 968}
+  ports:
+    keys:
+    - In
+    - Out
+    - LoopChain
+    - loopCount
+    values:
+    - _fieldName: In
+      _node: {fileID: -8682737574064531727}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -6904773016551573213}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -8682737574064531727}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 7110686953640680861}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: LoopChain
+      _node: {fileID: -8682737574064531727}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -5844840286383658971}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: loopCount
+      _node: {fileID: -8682737574064531727}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  LoopChain: {fileID: 0}
+  infiniteLoop: 0
+  loopCount: 2
+--- !u!114 &-8111611705767862851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
+  m_Name: Wave Spawnable Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1384, y: 1512}
+  ports:
+    keys:
+    - Spawnable
+    values:
+    - _fieldName: Spawnable
+      _node: {fileID: -8111611705767862851}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 8737119579031365790}
+      _direction: 1
+      _dynamic: 0
+  referenceMode: 1
+  referenceTag: Boss
+  referenceName: GoblinWarrior
+  referenceID: 0
+  Spawnable: {fileID: 0}
+--- !u!114 &-7695926707073998193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3544, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -7695926707073998193}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 2055363123533293815}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -7695926707073998193}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2
+--- !u!114 &-7612981251369851606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7980dabfbd9598643807b02cfc68cd0f, type: 3}
+  m_Name: Wave Loop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -120, y: 984}
+  ports:
+    keys:
+    - In
+    - Out
+    - LoopChain
+    - loopCount
+    values:
+    - _fieldName: In
+      _node: {fileID: -7612981251369851606}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -5829448414819497956}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -7612981251369851606}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 1469023710767473319}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: LoopChain
+      _node: {fileID: -7612981251369851606}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -2300107786998231954}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: loopCount
+      _node: {fileID: -7612981251369851606}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  LoopChain: {fileID: 0}
+  infiniteLoop: 0
+  loopCount: 1
+--- !u!114 &-6904773016551573213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2008, y: 792}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -6904773016551573213}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 7944272090610078354}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -6904773016551573213}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -8682737574064531727}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2
+--- !u!114 &-6869405126912164358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1800, y: 1864}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -6869405126912164358}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 7385391303182970883}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -6869405126912164358}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -6549265824414106408}
       _direction: 1
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
   eventArgs: End Wave
---- !u!114 &-8521982146745793067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
-  m_Name: Wave Event
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1896, y: 8}
-  ports:
-    keys:
-    - In
-    - Out
-    values:
-    - _fieldName: In
-      _node: {fileID: -8521982146745793067}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: False
-        node: {fileID: -137589111310512511}
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: Out
-      _node: {fileID: -8521982146745793067}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: In
-        node: {fileID: -6948693156650486313}
-      _direction: 1
-      _dynamic: 0
-  In: {fileID: 0}
-  Out: {fileID: 0}
-  eventArgs: Start Boss Wave
---- !u!114 &-8166813453311568607
+--- !u!114 &-6828777933889555990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +355,7 @@ MonoBehaviour:
   m_Name: Wave Condition
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1448, y: 136}
+  position: {x: 1656, y: 1160}
   ports:
     keys:
     - In
@@ -103,39 +365,39 @@ MonoBehaviour:
     - valueFloat
     values:
     - _fieldName: In
-      _node: {fileID: -8166813453311568607}
+      _node: {fileID: -6828777933889555990}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: LoopChain
-        node: {fileID: 3556771279877847939}
+        node: {fileID: 1744327124121235223}
       _direction: 0
       _dynamic: 0
     - _fieldName: True
-      _node: {fileID: -8166813453311568607}
+      _node: {fileID: -6828777933889555990}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: value
-      _node: {fileID: -8166813453311568607}
+      _node: {fileID: -6828777933889555990}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: False
-      _node: {fileID: -8166813453311568607}
+      _node: {fileID: -6828777933889555990}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 5105660185438321831}
+        node: {fileID: 2726494738724068433}
       _direction: 1
       _dynamic: 0
     - _fieldName: valueFloat
-      _node: {fileID: -8166813453311568607}
+      _node: {fileID: -6828777933889555990}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -150,166 +412,7 @@ MonoBehaviour:
   value: 2
   valueFloat: 0
   valueBool: 0
---- !u!114 &-7532401544670058895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
-  m_Name: Wave Spawnable Item
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 808, y: 152}
-  ports:
-    keys:
-    - Spawnable
-    values:
-    - _fieldName: Spawnable
-      _node: {fileID: -7532401544670058895}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Spawnable
-        node: {fileID: -5034862419630732384}
-      _direction: 1
-      _dynamic: 0
-  referenceMode: 1
-  referenceTag: Boss
-  referenceName: Demon
-  referenceID: 0
-  Spawnable: {fileID: 0}
---- !u!114 &-6948693156650486313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63cb02d82b2230c48996af5f1dfebbf6, type: 3}
-  m_Name: Wave
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2200, y: 8}
-  ports:
-    keys:
-    - In
-    - Out
-    - SubWaves
-    - Spawner
-    - Spawnable
-    - spawnCount
-    - spawnCountMultiplier
-    - spawnFrequency
-    - spawnFrequencyMultiplier
-    - spawnRandomness
-    - spawnRandomnessMultiplier
-    values:
-    - _fieldName: In
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Out
-        node: {fileID: -8521982146745793067}
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: Out
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: In
-        node: {fileID: 5159956187040108201}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: SubWaves
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: Spawner
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: Spawnable
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Spawnable
-        node: {fileID: 8995424899091828216}
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: spawnCount
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: spawnCountMultiplier
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: spawnFrequency
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: spawnFrequencyMultiplier
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: spawnRandomness
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: spawnRandomnessMultiplier
-      _node: {fileID: -6948693156650486313}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-  Spawner: {fileID: 0}
-  Spawnable: {fileID: 0}
-  waveMode: 0
-  spawnCount: 1
-  spawnCountMultiplier: 1.5
-  spawnFrequency: 0
-  spawnFrequencyMultiplier: 0.9
-  spawnRandomness: 0
-  spawnRandomnessMultiplier: 0.85
-  In: {fileID: 0}
-  Out: {fileID: 0}
-  SubWaves: {fileID: 0}
-  advanceWaveCounter: 1
-  waveCounterMode: 0
-  continueMode: 2
-  waitForItemSpawn: 0
---- !u!114 &-6882451125238474147
+--- !u!114 &-6549265824414106408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,23 +425,23 @@ MonoBehaviour:
   m_Name: Wave Delay
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2280, y: 408}
+  position: {x: -1592, y: 1864}
   ports:
     keys:
     - In
     - Out
     values:
     - _fieldName: In
-      _node: {fileID: -6882451125238474147}
+      _node: {fileID: -6549265824414106408}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 5159956187040108201}
+        node: {fileID: -6869405126912164358}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: -6882451125238474147}
+      _node: {fileID: -6549265824414106408}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
@@ -346,8 +449,68 @@ MonoBehaviour:
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
-  delay: 8
---- !u!114 &-6215160581475853078
+  delay: 2
+--- !u!114 &-6235568648925758931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7980dabfbd9598643807b02cfc68cd0f, type: 3}
+  m_Name: Wave Loop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3336, y: 1000}
+  ports:
+    keys:
+    - In
+    - Out
+    - LoopChain
+    - loopCount
+    values:
+    - _fieldName: In
+      _node: {fileID: -6235568648925758931}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 2483357419198166837}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -6235568648925758931}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 4890808169705893065}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: LoopChain
+      _node: {fileID: -6235568648925758931}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 6553006220974201977}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: loopCount
+      _node: {fileID: -6235568648925758931}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  LoopChain: {fileID: 0}
+  infiniteLoop: 1
+  loopCount: 1
+--- !u!114 &-6226713782644530739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,34 +523,268 @@ MonoBehaviour:
   m_Name: Wave Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 808, y: 8}
+  position: {x: -1768, y: 1336}
   ports:
     keys:
     - In
     - Out
     values:
     - _fieldName: In
-      _node: {fileID: -6215160581475853078}
+      _node: {fileID: -6226713782644530739}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: False
-        node: {fileID: -27562088849327611}
+        node: {fileID: -5844840286383658971}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: -6215160581475853078}
+      _node: {fileID: -6226713782644530739}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: -5034862419630732384}
+        node: {fileID: 7385391303182970883}
       _direction: 1
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
   eventArgs: Start Wave
---- !u!114 &-5034862419630732384
+--- !u!114 &-6025460475494494644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
+  m_Name: Wave Spawnable Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2552, y: 1528}
+  ports:
+    keys:
+    - Spawnable
+    values:
+    - _fieldName: Spawnable
+      _node: {fileID: -6025460475494494644}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 8000607521457006851}
+      _direction: 1
+      _dynamic: 0
+  referenceMode: 1
+  referenceTag: Boss
+  referenceName: Skeleton_Boss
+  referenceID: 0
+  Spawnable: {fileID: 0}
+--- !u!114 &-5844840286383658971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
+  m_Name: Wave Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1784, y: 1144}
+  ports:
+    keys:
+    - In
+    - True
+    - value
+    - False
+    - valueFloat
+    values:
+    - _fieldName: In
+      _node: {fileID: -5844840286383658971}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: LoopChain
+        node: {fileID: -8682737574064531727}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: True
+      _node: {fileID: -5844840286383658971}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: value
+      _node: {fileID: -5844840286383658971}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: -5844840286383658971}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -6226713782644530739}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: valueFloat
+      _node: {fileID: -5844840286383658971}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  True: {fileID: 0}
+  False: {fileID: 0}
+  condition: 5
+  parameterName: 
+  operand: 6
+  value: 2
+  valueFloat: 0
+  valueBool: 0
+--- !u!114 &-5829448414819497956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7980dabfbd9598643807b02cfc68cd0f, type: 3}
+  m_Name: Wave Loop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -680, y: 968}
+  ports:
+    keys:
+    - In
+    - Out
+    - LoopChain
+    - loopCount
+    values:
+    - _fieldName: In
+      _node: {fileID: -5829448414819497956}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 7110686953640680861}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -5829448414819497956}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -7612981251369851606}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: LoopChain
+      _node: {fileID: -5829448414819497956}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 3118255887097188333}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: loopCount
+      _node: {fileID: -5829448414819497956}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  LoopChain: {fileID: 0}
+  infiniteLoop: 0
+  loopCount: 2
+--- !u!114 &-5762666944047250865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -728, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -5762666944047250865}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 74209457296947922}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -5762666944047250865}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 2843820642792738512}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: End Wave
+--- !u!114 &-5310051676122335906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
+  m_Name: Wave Spawnable Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 808, y: 1496}
+  ports:
+    keys:
+    - Spawnable
+    values:
+    - _fieldName: Spawnable
+      _node: {fileID: -5310051676122335906}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: -3313518604243114299}
+      _direction: 1
+      _dynamic: 0
+  referenceMode: 1
+  referenceTag: Boss
+  referenceName: Skeleton03
+  referenceID: 0
+  Spawnable: {fileID: 0}
+--- !u!114 &-4744581435004313162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -400,7 +797,7 @@ MonoBehaviour:
   m_Name: Wave
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1080, y: -24}
+  position: {x: 2280, y: 1480}
   ports:
     keys:
     - In
@@ -416,83 +813,83 @@ MonoBehaviour:
     - spawnRandomnessMultiplier
     values:
     - _fieldName: In
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: -6215160581475853078}
+        node: {fileID: 1350955105690641641}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: -8719320570754748323}
+        node: {fileID: 1868126712678236820}
       _direction: 1
       _dynamic: 0
     - _fieldName: SubWaves
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: Spawner
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: Spawnable
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Spawnable
-        node: {fileID: -7532401544670058895}
+        node: {fileID: 1662537463920035641}
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnCount
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnCountMultiplier
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnFrequency
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnFrequencyMultiplier
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnRandomness
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnRandomnessMultiplier
-      _node: {fileID: -5034862419630732384}
+      _node: {fileID: -4744581435004313162}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -501,7 +898,7 @@ MonoBehaviour:
   Spawner: {fileID: 0}
   Spawnable: {fileID: 0}
   waveMode: 0
-  spawnCount: 10
+  spawnCount: 5
   spawnCountMultiplier: 1.5
   spawnFrequency: 0
   spawnFrequencyMultiplier: 0.9
@@ -514,6 +911,781 @@ MonoBehaviour:
   waveCounterMode: 0
   continueMode: 2
   waitForItemSpawn: 0
+--- !u!114 &-4524369657007936942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 88, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -4524369657007936942}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 1181265951216436958}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -4524369657007936942}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2
+--- !u!114 &-4356841391337219268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2984, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -4356841391337219268}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 5326759148422851666}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -4356841391337219268}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2
+--- !u!114 &-3426072878098423582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1256, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -3426072878098423582}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 3204943822556304345}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -3426072878098423582}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2
+--- !u!114 &-3313518604243114299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cb02d82b2230c48996af5f1dfebbf6, type: 3}
+  m_Name: Wave
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1080, y: 1480}
+  ports:
+    keys:
+    - In
+    - Out
+    - SubWaves
+    - Spawner
+    - Spawnable
+    - spawnCount
+    - spawnCountMultiplier
+    - spawnFrequency
+    - spawnFrequencyMultiplier
+    - spawnRandomness
+    - spawnRandomnessMultiplier
+    values:
+    - _fieldName: In
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 6693856183842913918}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 3204943822556304345}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: SubWaves
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: Spawner
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Spawnable
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: -5310051676122335906}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCount
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCountMultiplier
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequency
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequencyMultiplier
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomness
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomnessMultiplier
+      _node: {fileID: -3313518604243114299}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  Spawner: {fileID: 0}
+  Spawnable: {fileID: 0}
+  waveMode: 0
+  spawnCount: 5
+  spawnCountMultiplier: 1.5
+  spawnFrequency: 0
+  spawnFrequencyMultiplier: 0.9
+  spawnRandomness: 0
+  spawnRandomnessMultiplier: 0.85
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  SubWaves: {fileID: 0}
+  advanceWaveCounter: 1
+  waveCounterMode: 0
+  continueMode: 2
+  waitForItemSpawn: 0
+--- !u!114 &-2917286856898538646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
+  m_Name: Wave Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2280, y: 1160}
+  ports:
+    keys:
+    - In
+    - True
+    - value
+    - False
+    - valueFloat
+    values:
+    - _fieldName: In
+      _node: {fileID: -2917286856898538646}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: True
+      _node: {fileID: -2917286856898538646}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: value
+      _node: {fileID: -2917286856898538646}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: -2917286856898538646}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 1350955105690641641}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: valueFloat
+      _node: {fileID: -2917286856898538646}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  True: {fileID: 0}
+  False: {fileID: 0}
+  condition: 5
+  parameterName: 
+  operand: 6
+  value: 2
+  valueFloat: 0
+  valueBool: 0
+--- !u!114 &-2781481321621535030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1816, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -2781481321621535030}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -271380228524682579}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -2781481321621535030}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2
+--- !u!114 &-2300107786998231954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
+  m_Name: Wave Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -120, y: 1144}
+  ports:
+    keys:
+    - In
+    - True
+    - value
+    - False
+    - valueFloat
+    values:
+    - _fieldName: In
+      _node: {fileID: -2300107786998231954}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: LoopChain
+        node: {fileID: -7612981251369851606}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: True
+      _node: {fileID: -2300107786998231954}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: value
+      _node: {fileID: -2300107786998231954}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: -2300107786998231954}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 3398290912977902}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: valueFloat
+      _node: {fileID: -2300107786998231954}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  True: {fileID: 0}
+  False: {fileID: 0}
+  condition: 5
+  parameterName: 
+  operand: 6
+  value: 2
+  valueFloat: 0
+  valueBool: 0
+--- !u!114 &-2280767031640515603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -2280767031640515603}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 8252944846887305351}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -2280767031640515603}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 8844529392324700821}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: End Wave
+--- !u!114 &-1902513529280523044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -680, y: 1336}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -1902513529280523044}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: False
+        node: {fileID: 3118255887097188333}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -1902513529280523044}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 74209457296947922}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: Start Wave
+--- !u!114 &-1870280194920416129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7980dabfbd9598643807b02cfc68cd0f, type: 3}
+  m_Name: Wave Loop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1080, y: 1000}
+  ports:
+    keys:
+    - In
+    - Out
+    - LoopChain
+    - loopCount
+    values:
+    - _fieldName: In
+      _node: {fileID: -1870280194920416129}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 1469023710767473319}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -1870280194920416129}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 1744327124121235223}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: LoopChain
+      _node: {fileID: -1870280194920416129}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 3390479421560144191}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: loopCount
+      _node: {fileID: -1870280194920416129}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  LoopChain: {fileID: 0}
+  infiniteLoop: 0
+  loopCount: 1
+--- !u!114 &-1855027094981007429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
+  m_Name: Wave Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2808, y: 1160}
+  ports:
+    keys:
+    - In
+    - True
+    - value
+    - False
+    - valueFloat
+    values:
+    - _fieldName: In
+      _node: {fileID: -1855027094981007429}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: LoopChain
+        node: {fileID: 2483357419198166837}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: True
+      _node: {fileID: -1855027094981007429}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: value
+      _node: {fileID: -1855027094981007429}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: -1855027094981007429}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -9123639034248379809}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: valueFloat
+      _node: {fileID: -1855027094981007429}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  True: {fileID: 0}
+  False: {fileID: 0}
+  condition: 5
+  parameterName: 
+  operand: 6
+  value: 2
+  valueFloat: 0
+  valueBool: 0
+--- !u!114 &-1376094006937618493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
+  m_Name: Wave Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: 1144}
+  ports:
+    keys:
+    - In
+    - True
+    - value
+    - False
+    - valueFloat
+    values:
+    - _fieldName: In
+      _node: {fileID: -1376094006937618493}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: LoopChain
+        node: {fileID: 7110686953640680861}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: True
+      _node: {fileID: -1376094006937618493}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: value
+      _node: {fileID: -1376094006937618493}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: -1376094006937618493}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 5610081018382841110}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: valueFloat
+      _node: {fileID: -1376094006937618493}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  True: {fileID: 0}
+  False: {fileID: 0}
+  condition: 5
+  parameterName: 
+  operand: 6
+  value: 2
+  valueFloat: 0
+  valueBool: 0
+--- !u!114 &-271380228524682579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1608, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -271380228524682579}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 8737119579031365790}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -271380228524682579}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -2781481321621535030}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: End Wave
+--- !u!114 &-265954788388557541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1032, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: -265954788388557541}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 1320985994330905595}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: -265954788388557541}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2
 --- !u!114 &-229781107640230286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,7 +1705,7 @@ MonoBehaviour:
     values: []
   parameters:
     parameters: []
---- !u!114 &-137589111310512511
+--- !u!114 &-36618427002255083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,7 +1718,7 @@ MonoBehaviour:
   m_Name: Wave Condition
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1528, y: -8}
+  position: {x: 456, y: 1144}
   ports:
     keys:
     - In
@@ -556,109 +1728,39 @@ MonoBehaviour:
     - valueFloat
     values:
     - _fieldName: In
-      _node: {fileID: -137589111310512511}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Out
-        node: {fileID: 606337059739204464}
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: True
-      _node: {fileID: -137589111310512511}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: value
-      _node: {fileID: -137589111310512511}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: False
-      _node: {fileID: -137589111310512511}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: In
-        node: {fileID: -8521982146745793067}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: valueFloat
-      _node: {fileID: -137589111310512511}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-  In: {fileID: 0}
-  True: {fileID: 0}
-  False: {fileID: 0}
-  condition: 5
-  parameterName: 
-  operand: 6
-  value: 2
-  valueFloat: 0
-  valueBool: 0
---- !u!114 &-27562088849327611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
-  m_Name: Wave Condition
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 504, y: 24}
-  ports:
-    keys:
-    - In
-    - True
-    - value
-    - False
-    - valueFloat
-    values:
-    - _fieldName: In
-      _node: {fileID: -27562088849327611}
+      _node: {fileID: -36618427002255083}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: LoopChain
-        node: {fileID: 2401589899298649890}
+        node: {fileID: 1469023710767473319}
       _direction: 0
       _dynamic: 0
     - _fieldName: True
-      _node: {fileID: -27562088849327611}
+      _node: {fileID: -36618427002255083}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: value
-      _node: {fileID: -27562088849327611}
+      _node: {fileID: -36618427002255083}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: False
-      _node: {fileID: -27562088849327611}
+      _node: {fileID: -36618427002255083}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: -6215160581475853078}
+        node: {fileID: 7991401072412207532}
       _direction: 1
       _dynamic: 0
     - _fieldName: valueFloat
-      _node: {fileID: -27562088849327611}
+      _node: {fileID: -36618427002255083}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -686,110 +1788,80 @@ MonoBehaviour:
   m_Name: WaveConfig-Waves
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 114806190471274342}
-  - {fileID: 114268428497812954}
-  - {fileID: 114041180747668028}
-  - {fileID: 114908896556198936}
-  - {fileID: 114290616143481016}
-  - {fileID: 114830246887259344}
-  - {fileID: 114624955693683498}
-  - {fileID: 114676896058141866}
-  - {fileID: 114476885749854624}
-  - {fileID: 114222702406547016}
   - {fileID: -229781107640230286}
-  - {fileID: 2401589899298649890}
-  - {fileID: -27562088849327611}
-  - {fileID: -5034862419630732384}
-  - {fileID: -6215160581475853078}
-  - {fileID: -7532401544670058895}
-  - {fileID: -8719320570754748323}
-  - {fileID: 7975216893413157738}
-  - {fileID: 606337059739204464}
-  - {fileID: -137589111310512511}
-  - {fileID: -8521982146745793067}
-  - {fileID: 8995424899091828216}
-  - {fileID: -6948693156650486313}
-  - {fileID: 5159956187040108201}
-  - {fileID: -6882451125238474147}
-  - {fileID: 3556771279877847939}
-  - {fileID: -8166813453311568607}
-  - {fileID: 5105660185438321831}
-  - {fileID: 2887434866160240386}
-  - {fileID: 2213124743475263861}
-  - {fileID: 3989987329292796489}
-  - {fileID: 8472875168792936479}
-  - {fileID: 3386029099508895006}
---- !u!114 &114041180747668028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
-  m_Name: Wave Condition
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -520, y: 24}
-  ports:
-    keys:
-    - In
-    - True
-    - value
-    - False
-    - valueFloat
-    values:
-    - _fieldName: In
-      _node: {fileID: 114041180747668028}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: LoopChain
-        node: {fileID: 114908896556198936}
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: True
-      _node: {fileID: 114041180747668028}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: value
-      _node: {fileID: 114041180747668028}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: False
-      _node: {fileID: 114041180747668028}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: In
-        node: {fileID: 114476885749854624}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: valueFloat
-      _node: {fileID: 114041180747668028}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _dynamic: 0
-  In: {fileID: 0}
-  True: {fileID: 0}
-  False: {fileID: 0}
-  condition: 5
-  parameterName: 
-  operand: 6
-  value: 2
-  valueFloat: 0
-  valueBool: 0
---- !u!114 &114222702406547016
+  - {fileID: 7944272090610078354}
+  - {fileID: -6904773016551573213}
+  - {fileID: -8682737574064531727}
+  - {fileID: -5844840286383658971}
+  - {fileID: -6226713782644530739}
+  - {fileID: 7385391303182970883}
+  - {fileID: -6869405126912164358}
+  - {fileID: -6549265824414106408}
+  - {fileID: 3765212913072056082}
+  - {fileID: 7110686953640680861}
+  - {fileID: -1376094006937618493}
+  - {fileID: 5610081018382841110}
+  - {fileID: 4782164456187820110}
+  - {fileID: -9089876296388296686}
+  - {fileID: 1320985994330905595}
+  - {fileID: -265954788388557541}
+  - {fileID: -5829448414819497956}
+  - {fileID: 3118255887097188333}
+  - {fileID: -1902513529280523044}
+  - {fileID: 74209457296947922}
+  - {fileID: 3096394974803261637}
+  - {fileID: -5762666944047250865}
+  - {fileID: 2843820642792738512}
+  - {fileID: -7612981251369851606}
+  - {fileID: -2300107786998231954}
+  - {fileID: 3398290912977902}
+  - {fileID: 6517444084712711421}
+  - {fileID: 956566214575778842}
+  - {fileID: 1181265951216436958}
+  - {fileID: -4524369657007936942}
+  - {fileID: 1469023710767473319}
+  - {fileID: -36618427002255083}
+  - {fileID: 7991401072412207532}
+  - {fileID: 8252944846887305351}
+  - {fileID: -2280767031640515603}
+  - {fileID: 8844529392324700821}
+  - {fileID: 5891333249580173036}
+  - {fileID: -1870280194920416129}
+  - {fileID: 3390479421560144191}
+  - {fileID: 6693856183842913918}
+  - {fileID: -3313518604243114299}
+  - {fileID: 3204943822556304345}
+  - {fileID: -3426072878098423582}
+  - {fileID: -5310051676122335906}
+  - {fileID: 1744327124121235223}
+  - {fileID: -6828777933889555990}
+  - {fileID: 2726494738724068433}
+  - {fileID: 8737119579031365790}
+  - {fileID: -271380228524682579}
+  - {fileID: -2781481321621535030}
+  - {fileID: -8111611705767862851}
+  - {fileID: 5142244319871904360}
+  - {fileID: -2917286856898538646}
+  - {fileID: 1350955105690641641}
+  - {fileID: -4744581435004313162}
+  - {fileID: 1868126712678236820}
+  - {fileID: 1522385850293877135}
+  - {fileID: 1662537463920035641}
+  - {fileID: 2483357419198166837}
+  - {fileID: -1855027094981007429}
+  - {fileID: -9123639034248379809}
+  - {fileID: 8000607521457006851}
+  - {fileID: 5326759148422851666}
+  - {fileID: -4356841391337219268}
+  - {fileID: -6025460475494494644}
+  - {fileID: -6235568648925758931}
+  - {fileID: 6553006220974201977}
+  - {fileID: 3384810319250038783}
+  - {fileID: 5684021167546972029}
+  - {fileID: 2055363123533293815}
+  - {fileID: -7695926707073998193}
+  - {fileID: 4890808169705893065}
+--- !u!114 &3398290912977902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -802,72 +1874,34 @@ MonoBehaviour:
   m_Name: Wave Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2472, y: -184}
+  position: {x: -120, y: 1336}
   ports:
     keys:
     - In
     - Out
     values:
     - _fieldName: In
-      _node: {fileID: 114222702406547016}
+      _node: {fileID: 3398290912977902}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: LoopChain
-        node: {fileID: 606337059739204464}
+      - fieldName: False
+        node: {fileID: -2300107786998231954}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 114222702406547016}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _dynamic: 0
-  In: {fileID: 0}
-  Out: {fileID: 0}
-  eventArgs: ' End Game'
---- !u!114 &114268428497812954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
-  m_Name: Wave Delay
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -1608, y: -216}
-  ports:
-    keys:
-    - In
-    - Out
-    values:
-    - _fieldName: In
-      _node: {fileID: 114268428497812954}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Out
-        node: {fileID: 114806190471274342}
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: Out
-      _node: {fileID: 114268428497812954}
+      _node: {fileID: 3398290912977902}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 3556771279877847939}
+        node: {fileID: 956566214575778842}
       _direction: 1
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
-  delay: 5
---- !u!114 &114290616143481016
+  eventArgs: Start Wave
+--- !u!114 &74209457296947922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -880,7 +1914,7 @@ MonoBehaviour:
   m_Name: Wave
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 56, y: 24}
+  position: {x: -680, y: 1480}
   ports:
     keys:
     - In
@@ -896,83 +1930,83 @@ MonoBehaviour:
     - spawnRandomnessMultiplier
     values:
     - _fieldName: In
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 114476885749854624}
+        node: {fileID: -1902513529280523044}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 114624955693683498}
+        node: {fileID: -5762666944047250865}
       _direction: 1
       _dynamic: 0
     - _fieldName: SubWaves
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: Spawner
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: Spawnable
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Spawnable
-        node: {fileID: 114830246887259344}
+        node: {fileID: 3096394974803261637}
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnCount
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnCountMultiplier
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnFrequency
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnFrequencyMultiplier
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnRandomness
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnRandomnessMultiplier
-      _node: {fileID: 114290616143481016}
+      _node: {fileID: 74209457296947922}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -981,7 +2015,7 @@ MonoBehaviour:
   Spawner: {fileID: 0}
   Spawnable: {fileID: 0}
   waveMode: 0
-  spawnCount: 10
+  spawnCount: 5
   spawnCountMultiplier: 1.5
   spawnFrequency: 0
   spawnFrequencyMultiplier: 0.9
@@ -994,7 +2028,7 @@ MonoBehaviour:
   waveCounterMode: 0
   continueMode: 2
   waitForItemSpawn: 0
---- !u!114 &114476885749854624
+--- !u!114 &956566214575778842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1003,78 +2037,305 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
-  m_Name: Wave Event
+  m_Script: {fileID: 11500000, guid: 63cb02d82b2230c48996af5f1dfebbf6, type: 3}
+  m_Name: Wave
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -216, y: 24}
+  position: {x: -120, y: 1480}
   ports:
     keys:
     - In
     - Out
+    - SubWaves
+    - Spawner
+    - Spawnable
+    - spawnCount
+    - spawnCountMultiplier
+    - spawnFrequency
+    - spawnFrequencyMultiplier
+    - spawnRandomness
+    - spawnRandomnessMultiplier
     values:
     - _fieldName: In
-      _node: {fileID: 114476885749854624}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: False
-        node: {fileID: 114041180747668028}
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: Out
-      _node: {fileID: 114476885749854624}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: In
-        node: {fileID: 114290616143481016}
-      _direction: 1
-      _dynamic: 0
-  In: {fileID: 0}
-  Out: {fileID: 0}
-  eventArgs: Start Wave
---- !u!114 &114624955693683498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
-  m_Name: Wave Event
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 24, y: 440}
-  ports:
-    keys:
-    - In
-    - Out
-    values:
-    - _fieldName: In
-      _node: {fileID: 114624955693683498}
+      _node: {fileID: 956566214575778842}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 114290616143481016}
+        node: {fileID: 3398290912977902}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 114624955693683498}
+      _node: {fileID: 956566214575778842}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 114676896058141866}
+        node: {fileID: 1181265951216436958}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: SubWaves
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: Spawner
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Spawnable
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 6517444084712711421}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCount
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCountMultiplier
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequency
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequencyMultiplier
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomness
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomnessMultiplier
+      _node: {fileID: 956566214575778842}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  Spawner: {fileID: 0}
+  Spawnable: {fileID: 0}
+  waveMode: 0
+  spawnCount: 5
+  spawnCountMultiplier: 1.5
+  spawnFrequency: 0
+  spawnFrequencyMultiplier: 0.9
+  spawnRandomness: 0
+  spawnRandomnessMultiplier: 0.85
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  SubWaves: {fileID: 0}
+  advanceWaveCounter: 1
+  waveCounterMode: 0
+  continueMode: 2
+  waitForItemSpawn: 0
+--- !u!114 &1181265951216436958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -120, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 1181265951216436958}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 956566214575778842}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 1181265951216436958}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -4524369657007936942}
       _direction: 1
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
   eventArgs: End Wave
---- !u!114 &114676896058141866
+--- !u!114 &1320985994330905595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1240, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 1320985994330905595}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 4782164456187820110}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 1320985994330905595}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -265954788388557541}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: End Wave
+--- !u!114 &1350955105690641641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2280, y: 1336}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 1350955105690641641}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: False
+        node: {fileID: -2917286856898538646}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 1350955105690641641}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -4744581435004313162}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: Start Wave
+--- !u!114 &1469023710767473319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7980dabfbd9598643807b02cfc68cd0f, type: 3}
+  m_Name: Wave Loop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 456, y: 984}
+  ports:
+    keys:
+    - In
+    - Out
+    - LoopChain
+    - loopCount
+    values:
+    - _fieldName: In
+      _node: {fileID: 1469023710767473319}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -7612981251369851606}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 1469023710767473319}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -1870280194920416129}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: LoopChain
+      _node: {fileID: 1469023710767473319}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -36618427002255083}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: loopCount
+      _node: {fileID: 1469023710767473319}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  LoopChain: {fileID: 0}
+  infiniteLoop: 0
+  loopCount: 1
+--- !u!114 &1522385850293877135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1087,23 +2348,23 @@ MonoBehaviour:
   m_Name: Wave Delay
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: 456}
+  position: {x: 2456, y: 1848}
   ports:
     keys:
     - In
     - Out
     values:
     - _fieldName: In
-      _node: {fileID: 114676896058141866}
+      _node: {fileID: 1522385850293877135}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 114624955693683498}
+        node: {fileID: 1868126712678236820}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 114676896058141866}
+      _node: {fileID: 1522385850293877135}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
@@ -1111,36 +2372,8 @@ MonoBehaviour:
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
-  delay: 8
---- !u!114 &114806190471274342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b954258f6da6a4148808e1415db9e10a, type: 3}
-  m_Name: Wave Start
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -1800, y: -280}
-  ports:
-    keys:
-    - Out
-    values:
-    - _fieldName: Out
-      _node: {fileID: 114806190471274342}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: In
-        node: {fileID: 114268428497812954}
-      _direction: 1
-      _dynamic: 0
-  Out: {fileID: 0}
---- !u!114 &114830246887259344
+  delay: 2
+--- !u!114 &1662537463920035641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1153,26 +2386,26 @@ MonoBehaviour:
   m_Name: Wave Spawnable Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -216, y: 152}
+  position: {x: 2008, y: 1512}
   ports:
     keys:
     - Spawnable
     values:
     - _fieldName: Spawnable
-      _node: {fileID: 114830246887259344}
+      _node: {fileID: 1662537463920035641}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Spawnable
-        node: {fileID: 114290616143481016}
+        node: {fileID: -4744581435004313162}
       _direction: 1
       _dynamic: 0
   referenceMode: 1
   referenceTag: Boss
-  referenceName: Ghost
+  referenceName: SkeletonKnight
   referenceID: 0
   Spawnable: {fileID: 0}
---- !u!114 &114908896556198936
+--- !u!114 &1744327124121235223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1185,7 +2418,7 @@ MonoBehaviour:
   m_Name: Wave Loop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -520, y: -248}
+  position: {x: 1656, y: 1000}
   ports:
     keys:
     - In
@@ -1194,34 +2427,34 @@ MonoBehaviour:
     - loopCount
     values:
     - _fieldName: In
-      _node: {fileID: 114908896556198936}
+      _node: {fileID: 1744327124121235223}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 3556771279877847939}
+        node: {fileID: -1870280194920416129}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 114908896556198936}
+      _node: {fileID: 1744327124121235223}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 2401589899298649890}
+        node: {fileID: 5142244319871904360}
       _direction: 1
       _dynamic: 0
     - _fieldName: LoopChain
-      _node: {fileID: 114908896556198936}
+      _node: {fileID: 1744327124121235223}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 114041180747668028}
+        node: {fileID: -6828777933889555990}
       _direction: 1
       _dynamic: 0
     - _fieldName: loopCount
-      _node: {fileID: 114908896556198936}
+      _node: {fileID: 1744327124121235223}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -1231,8 +2464,8 @@ MonoBehaviour:
   Out: {fileID: 0}
   LoopChain: {fileID: 0}
   infiniteLoop: 0
-  loopCount: 5
---- !u!114 &606337059739204464
+  loopCount: 2
+--- !u!114 &1868126712678236820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1241,57 +2474,77 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7980dabfbd9598643807b02cfc68cd0f, type: 3}
-  m_Name: Wave Loop
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1592, y: -184}
+  position: {x: 2248, y: 1848}
   ports:
     keys:
     - In
     - Out
-    - LoopChain
-    - loopCount
     values:
     - _fieldName: In
-      _node: {fileID: 606337059739204464}
+      _node: {fileID: 1868126712678236820}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 2401589899298649890}
+        node: {fileID: -4744581435004313162}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 606337059739204464}
+      _node: {fileID: 1868126712678236820}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: -137589111310512511}
+        node: {fileID: 1522385850293877135}
       _direction: 1
-      _dynamic: 0
-    - _fieldName: LoopChain
-      _node: {fileID: 606337059739204464}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: In
-        node: {fileID: 114222702406547016}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: loopCount
-      _node: {fileID: 606337059739204464}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
-  LoopChain: {fileID: 0}
-  infiniteLoop: 0
-  loopCount: 1
+  eventArgs: End Wave
+--- !u!114 &2055363123533293815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3336, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 2055363123533293815}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 5684021167546972029}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 2055363123533293815}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -7695926707073998193}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: End Wave
 --- !u!114 &2213124743475263861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,7 +2575,7 @@ MonoBehaviour:
   referenceName: Ghost02
   referenceID: 0
   Spawnable: {fileID: 0}
---- !u!114 &2401589899298649890
+--- !u!114 &2483357419198166837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1335,7 +2588,7 @@ MonoBehaviour:
   m_Name: Wave Loop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 584, y: -200}
+  position: {x: 2808, y: 1000}
   ports:
     keys:
     - In
@@ -1344,34 +2597,34 @@ MonoBehaviour:
     - loopCount
     values:
     - _fieldName: In
-      _node: {fileID: 2401589899298649890}
+      _node: {fileID: 2483357419198166837}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 114908896556198936}
+        node: {fileID: 5142244319871904360}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 2401589899298649890}
+      _node: {fileID: 2483357419198166837}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 606337059739204464}
+        node: {fileID: -6235568648925758931}
       _direction: 1
       _dynamic: 0
     - _fieldName: LoopChain
-      _node: {fileID: 2401589899298649890}
+      _node: {fileID: 2483357419198166837}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: -27562088849327611}
+        node: {fileID: -1855027094981007429}
       _direction: 1
       _dynamic: 0
     - _fieldName: loopCount
-      _node: {fileID: 2401589899298649890}
+      _node: {fileID: 2483357419198166837}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -1381,8 +2634,370 @@ MonoBehaviour:
   Out: {fileID: 0}
   LoopChain: {fileID: 0}
   infiniteLoop: 0
-  loopCount: 5
---- !u!114 &2887434866160240386
+  loopCount: 1
+--- !u!114 &2726494738724068433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1656, y: 1336}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 2726494738724068433}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: False
+        node: {fileID: -6828777933889555990}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 2726494738724068433}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 8737119579031365790}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: Start Wave
+--- !u!114 &2843820642792738512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -504, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 2843820642792738512}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -5762666944047250865}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 2843820642792738512}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2
+--- !u!114 &3096394974803261637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
+  m_Name: Wave Spawnable Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -936, y: 1496}
+  ports:
+    keys:
+    - Spawnable
+    values:
+    - _fieldName: Spawnable
+      _node: {fileID: 3096394974803261637}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 74209457296947922}
+      _direction: 1
+      _dynamic: 0
+  referenceMode: 1
+  referenceTag: Boss
+  referenceName: Ghost02
+  referenceID: 0
+  Spawnable: {fileID: 0}
+--- !u!114 &3118255887097188333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
+  m_Name: Wave Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -680, y: 1144}
+  ports:
+    keys:
+    - In
+    - True
+    - value
+    - False
+    - valueFloat
+    values:
+    - _fieldName: In
+      _node: {fileID: 3118255887097188333}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: LoopChain
+        node: {fileID: -5829448414819497956}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: True
+      _node: {fileID: 3118255887097188333}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: value
+      _node: {fileID: 3118255887097188333}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: 3118255887097188333}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -1902513529280523044}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: valueFloat
+      _node: {fileID: 3118255887097188333}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  True: {fileID: 0}
+  False: {fileID: 0}
+  condition: 5
+  parameterName: 
+  operand: 6
+  value: 2
+  valueFloat: 0
+  valueBool: 0
+--- !u!114 &3204943822556304345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1048, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 3204943822556304345}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -3313518604243114299}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 3204943822556304345}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -3426072878098423582}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: End Wave
+--- !u!114 &3384810319250038783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3336, y: 1352}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 3384810319250038783}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: True
+        node: {fileID: 6553006220974201977}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 3384810319250038783}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 5684021167546972029}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: Start Wave
+--- !u!114 &3390479421560144191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
+  m_Name: Wave Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1080, y: 1160}
+  ports:
+    keys:
+    - In
+    - True
+    - value
+    - False
+    - valueFloat
+    values:
+    - _fieldName: In
+      _node: {fileID: 3390479421560144191}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: LoopChain
+        node: {fileID: -1870280194920416129}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: True
+      _node: {fileID: 3390479421560144191}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: value
+      _node: {fileID: 3390479421560144191}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: 3390479421560144191}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 6693856183842913918}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: valueFloat
+      _node: {fileID: 3390479421560144191}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  True: {fileID: 0}
+  False: {fileID: 0}
+  condition: 5
+  parameterName: 
+  operand: 6
+  value: 2
+  valueFloat: 0
+  valueBool: 0
+--- !u!114 &3765212913072056082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
+  m_Name: Wave Spawnable Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2072, y: 1496}
+  ports:
+    keys:
+    - Spawnable
+    values:
+    - _fieldName: Spawnable
+      _node: {fileID: 3765212913072056082}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 7385391303182970883}
+      _direction: 1
+      _dynamic: 0
+  referenceMode: 1
+  referenceTag: Boss
+  referenceName: Ghost
+  referenceID: 0
+  Spawnable: {fileID: 0}
+--- !u!114 &4782164456187820110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1395,7 +3010,7 @@ MonoBehaviour:
   m_Name: Wave
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -856, y: 120}
+  position: {x: -1208, y: 1480}
   ports:
     keys:
     - In
@@ -1411,81 +3026,83 @@ MonoBehaviour:
     - spawnRandomnessMultiplier
     values:
     - _fieldName: In
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 5105660185438321831}
+        node: {fileID: 5610081018382841110}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 3989987329292796489}
+        node: {fileID: 1320985994330905595}
       _direction: 1
       _dynamic: 0
     - _fieldName: SubWaves
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: Spawner
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: Spawnable
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: -9089876296388296686}
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnCount
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnCountMultiplier
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnFrequency
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnFrequencyMultiplier
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnRandomness
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 0
       _dynamic: 0
     - _fieldName: spawnRandomnessMultiplier
-      _node: {fileID: 2887434866160240386}
+      _node: {fileID: 4782164456187820110}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -1494,7 +3111,7 @@ MonoBehaviour:
   Spawner: {fileID: 0}
   Spawnable: {fileID: 0}
   waveMode: 0
-  spawnCount: 2
+  spawnCount: 5
   spawnCountMultiplier: 1.5
   spawnFrequency: 0
   spawnFrequencyMultiplier: 0.9
@@ -1507,7 +3124,7 @@ MonoBehaviour:
   waveCounterMode: 0
   continueMode: 2
   waitForItemSpawn: 0
---- !u!114 &3386029099508895006
+--- !u!114 &4890808169705893065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1516,28 +3133,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
-  m_Name: Wave Spawnable Item
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1144, y: 344}
+  position: {x: 3864, y: 1000}
   ports:
     keys:
-    - Spawnable
+    - In
+    - Out
     values:
-    - _fieldName: Spawnable
-      _node: {fileID: 3386029099508895006}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - _fieldName: In
+      _node: {fileID: 4890808169705893065}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -6235568648925758931}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 4890808169705893065}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
-  referenceMode: 1
-  referenceTag: Boss
-  referenceName: Ghost
-  referenceID: 0
-  Spawnable: {fileID: 0}
---- !u!114 &3556771279877847939
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: ' End Game'
+--- !u!114 &5142244319871904360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1550,7 +3175,7 @@ MonoBehaviour:
   m_Name: Wave Loop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1384, y: -104}
+  position: {x: 2280, y: 1000}
   ports:
     keys:
     - In
@@ -1559,34 +3184,32 @@ MonoBehaviour:
     - loopCount
     values:
     - _fieldName: In
-      _node: {fileID: 3556771279877847939}
+      _node: {fileID: 5142244319871904360}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 114268428497812954}
+        node: {fileID: 1744327124121235223}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 3556771279877847939}
+      _node: {fileID: 5142244319871904360}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 114908896556198936}
+        node: {fileID: 2483357419198166837}
       _direction: 1
       _dynamic: 0
     - _fieldName: LoopChain
-      _node: {fileID: 3556771279877847939}
+      _node: {fileID: 5142244319871904360}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: In
-        node: {fileID: -8166813453311568607}
+      connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: loopCount
-      _node: {fileID: 3556771279877847939}
+      _node: {fileID: 5142244319871904360}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -1597,7 +3220,7 @@ MonoBehaviour:
   LoopChain: {fileID: 0}
   infiniteLoop: 0
   loopCount: 2
---- !u!114 &3989987329292796489
+--- !u!114 &5326759148422851666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1610,34 +3233,34 @@ MonoBehaviour:
   m_Name: Wave Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -552, y: 408}
+  position: {x: 2760, y: 1848}
   ports:
     keys:
     - In
     - Out
     values:
     - _fieldName: In
-      _node: {fileID: 3989987329292796489}
+      _node: {fileID: 5326759148422851666}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: 2887434866160240386}
+        node: {fileID: 8000607521457006851}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 3989987329292796489}
+      _node: {fileID: 5326759148422851666}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 8472875168792936479}
+        node: {fileID: -4356841391337219268}
       _direction: 1
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
   eventArgs: End Wave
---- !u!114 &5105660185438321831
+--- !u!114 &5610081018382841110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1650,34 +3273,34 @@ MonoBehaviour:
   m_Name: Wave Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1096, y: 136}
+  position: {x: -1208, y: 1336}
   ports:
     keys:
     - In
     - Out
     values:
     - _fieldName: In
-      _node: {fileID: 5105660185438321831}
+      _node: {fileID: 5610081018382841110}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: False
-        node: {fileID: -8166813453311568607}
+        node: {fileID: -1376094006937618493}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 5105660185438321831}
+      _node: {fileID: 5610081018382841110}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: 2887434866160240386}
+        node: {fileID: 4782164456187820110}
       _direction: 1
       _dynamic: 0
   In: {fileID: 0}
   Out: {fileID: 0}
   eventArgs: Start Wave
---- !u!114 &5159956187040108201
+--- !u!114 &5684021167546972029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1686,114 +3309,123 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
-  m_Name: Wave Event
+  m_Script: {fileID: 11500000, guid: 63cb02d82b2230c48996af5f1dfebbf6, type: 3}
+  m_Name: Wave
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1976, y: 392}
+  position: {x: 3336, y: 1496}
   ports:
     keys:
     - In
     - Out
+    - SubWaves
+    - Spawner
+    - Spawnable
+    - spawnCount
+    - spawnCountMultiplier
+    - spawnFrequency
+    - spawnFrequencyMultiplier
+    - spawnRandomness
+    - spawnRandomnessMultiplier
     values:
     - _fieldName: In
-      _node: {fileID: 5159956187040108201}
+      _node: {fileID: 5684021167546972029}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Out
-        node: {fileID: -6948693156650486313}
+        node: {fileID: 3384810319250038783}
       _direction: 0
       _dynamic: 0
     - _fieldName: Out
-      _node: {fileID: 5159956187040108201}
+      _node: {fileID: 5684021167546972029}
       _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: In
-        node: {fileID: -6882451125238474147}
+        node: {fileID: 2055363123533293815}
       _direction: 1
       _dynamic: 0
-  In: {fileID: 0}
-  Out: {fileID: 0}
-  eventArgs: End Boss Wave
---- !u!114 &7975216893413157738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
-  m_Name: Wave Delay
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1176, y: 392}
-  ports:
-    keys:
-    - In
-    - Out
-    values:
-    - _fieldName: In
-      _node: {fileID: 7975216893413157738}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Out
-        node: {fileID: -8719320570754748323}
-      _direction: 0
-      _dynamic: 0
-    - _fieldName: Out
-      _node: {fileID: 7975216893413157738}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+    - _fieldName: SubWaves
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
-  In: {fileID: 0}
-  Out: {fileID: 0}
-  delay: 8
---- !u!114 &8472875168792936479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
-  m_Name: Wave Delay
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -312, y: 504}
-  ports:
-    keys:
-    - In
-    - Out
-    values:
-    - _fieldName: In
-      _node: {fileID: 8472875168792936479}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Out
-        node: {fileID: 3989987329292796489}
+    - _fieldName: Spawner
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
       _direction: 0
       _dynamic: 0
-    - _fieldName: Out
-      _node: {fileID: 8472875168792936479}
-      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+    - _fieldName: Spawnable
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
-      _direction: 1
+      _direction: 0
       _dynamic: 0
+    - _fieldName: spawnCount
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCountMultiplier
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequency
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequencyMultiplier
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomness
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomnessMultiplier
+      _node: {fileID: 5684021167546972029}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  Spawner: {fileID: 0}
+  Spawnable: {fileID: 0}
+  waveMode: 0
+  spawnCount: 10
+  spawnCountMultiplier: 1.5
+  spawnFrequency: 0
+  spawnFrequencyMultiplier: 0.9
+  spawnRandomness: 0
+  spawnRandomnessMultiplier: 0.85
   In: {fileID: 0}
   Out: {fileID: 0}
-  delay: 8
---- !u!114 &8995424899091828216
+  SubWaves: {fileID: 0}
+  advanceWaveCounter: 1
+  waveCounterMode: 0
+  continueMode: 2
+  waitForItemSpawn: 0
+--- !u!114 &5891333249580173036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1806,22 +3438,838 @@ MonoBehaviour:
   m_Name: Wave Spawnable Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1896, y: 136}
+  position: {x: 216, y: 1496}
   ports:
     keys:
     - Spawnable
     values:
     - _fieldName: Spawnable
-      _node: {fileID: 8995424899091828216}
+      _node: {fileID: 5891333249580173036}
       _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Spawnable
-        node: {fileID: -6948693156650486313}
+        node: {fileID: 8252944846887305351}
       _direction: 1
       _dynamic: 0
   referenceMode: 1
   referenceTag: Boss
-  referenceName: Skeleton_Boss
+  referenceName: Skeleton02
   referenceID: 0
   Spawnable: {fileID: 0}
+--- !u!114 &6517444084712711421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5507eaed73aa40b1344459bce6ce8, type: 3}
+  m_Name: Wave Spawnable Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -376, y: 1496}
+  ports:
+    keys:
+    - Spawnable
+    values:
+    - _fieldName: Spawnable
+      _node: {fileID: 6517444084712711421}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 956566214575778842}
+      _direction: 1
+      _dynamic: 0
+  referenceMode: 1
+  referenceTag: Boss
+  referenceName: Skeleton01
+  referenceID: 0
+  Spawnable: {fileID: 0}
+--- !u!114 &6553006220974201977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d0fe45c5e51ed478d5477164488c73, type: 3}
+  m_Name: Wave Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3336, y: 1160}
+  ports:
+    keys:
+    - In
+    - True
+    - value
+    - False
+    - valueFloat
+    values:
+    - _fieldName: In
+      _node: {fileID: 6553006220974201977}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: LoopChain
+        node: {fileID: -6235568648925758931}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: True
+      _node: {fileID: 6553006220974201977}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 3384810319250038783}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: value
+      _node: {fileID: 6553006220974201977}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: 6553006220974201977}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: valueFloat
+      _node: {fileID: 6553006220974201977}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  True: {fileID: 0}
+  False: {fileID: 0}
+  condition: 5
+  parameterName: 
+  operand: 6
+  value: 2
+  valueFloat: 0
+  valueBool: 0
+--- !u!114 &6693856183842913918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1080, y: 1336}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 6693856183842913918}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: False
+        node: {fileID: 3390479421560144191}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 6693856183842913918}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -3313518604243114299}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: Start Wave
+--- !u!114 &7110686953640680861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7980dabfbd9598643807b02cfc68cd0f, type: 3}
+  m_Name: Wave Loop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: 968}
+  ports:
+    keys:
+    - In
+    - Out
+    - LoopChain
+    - loopCount
+    values:
+    - _fieldName: In
+      _node: {fileID: 7110686953640680861}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -8682737574064531727}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 7110686953640680861}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -5829448414819497956}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: LoopChain
+      _node: {fileID: 7110686953640680861}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -1376094006937618493}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: loopCount
+      _node: {fileID: 7110686953640680861}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  LoopChain: {fileID: 0}
+  infiniteLoop: 0
+  loopCount: 2
+--- !u!114 &7385391303182970883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cb02d82b2230c48996af5f1dfebbf6, type: 3}
+  m_Name: Wave
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1784, y: 1480}
+  ports:
+    keys:
+    - In
+    - Out
+    - SubWaves
+    - Spawner
+    - Spawnable
+    - spawnCount
+    - spawnCountMultiplier
+    - spawnFrequency
+    - spawnFrequencyMultiplier
+    - spawnRandomness
+    - spawnRandomnessMultiplier
+    values:
+    - _fieldName: In
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -6226713782644530739}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -6869405126912164358}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: SubWaves
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: Spawner
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Spawnable
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 3765212913072056082}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCount
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCountMultiplier
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequency
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequencyMultiplier
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomness
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomnessMultiplier
+      _node: {fileID: 7385391303182970883}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  Spawner: {fileID: 0}
+  Spawnable: {fileID: 0}
+  waveMode: 0
+  spawnCount: 5
+  spawnCountMultiplier: 1.5
+  spawnFrequency: 0
+  spawnFrequencyMultiplier: 0.9
+  spawnRandomness: 0
+  spawnRandomnessMultiplier: 0.85
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  SubWaves: {fileID: 0}
+  advanceWaveCounter: 1
+  waveCounterMode: 0
+  continueMode: 2
+  waitForItemSpawn: 0
+--- !u!114 &7944272090610078354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b954258f6da6a4148808e1415db9e10a, type: 3}
+  m_Name: Wave Start
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2184, y: 808}
+  ports:
+    keys:
+    - Out
+    values:
+    - _fieldName: Out
+      _node: {fileID: 7944272090610078354}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -6904773016551573213}
+      _direction: 1
+      _dynamic: 0
+  Out: {fileID: 0}
+--- !u!114 &7991401072412207532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aba966500fb5ac4785fba58e2e43b4e, type: 3}
+  m_Name: Wave Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: 1336}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 7991401072412207532}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: False
+        node: {fileID: -36618427002255083}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 7991401072412207532}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 8252944846887305351}
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  eventArgs: Start Wave
+--- !u!114 &8000607521457006851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cb02d82b2230c48996af5f1dfebbf6, type: 3}
+  m_Name: Wave
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2808, y: 1480}
+  ports:
+    keys:
+    - In
+    - Out
+    - SubWaves
+    - Spawner
+    - Spawnable
+    - spawnCount
+    - spawnCountMultiplier
+    - spawnFrequency
+    - spawnFrequencyMultiplier
+    - spawnRandomness
+    - spawnRandomnessMultiplier
+    values:
+    - _fieldName: In
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -9123639034248379809}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: 5326759148422851666}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: SubWaves
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: Spawner
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Spawnable
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: -6025460475494494644}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCount
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCountMultiplier
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequency
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequencyMultiplier
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomness
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomnessMultiplier
+      _node: {fileID: 8000607521457006851}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  Spawner: {fileID: 0}
+  Spawnable: {fileID: 0}
+  waveMode: 0
+  spawnCount: 1
+  spawnCountMultiplier: 1.5
+  spawnFrequency: 0
+  spawnFrequencyMultiplier: 0.9
+  spawnRandomness: 0
+  spawnRandomnessMultiplier: 0.85
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  SubWaves: {fileID: 0}
+  advanceWaveCounter: 1
+  waveCounterMode: 0
+  continueMode: 2
+  waitForItemSpawn: 0
+--- !u!114 &8252944846887305351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cb02d82b2230c48996af5f1dfebbf6, type: 3}
+  m_Name: Wave
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: 1480}
+  ports:
+    keys:
+    - In
+    - Out
+    - SubWaves
+    - Spawner
+    - Spawnable
+    - spawnCount
+    - spawnCountMultiplier
+    - spawnFrequency
+    - spawnFrequencyMultiplier
+    - spawnRandomness
+    - spawnRandomnessMultiplier
+    values:
+    - _fieldName: In
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 7991401072412207532}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -2280767031640515603}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: SubWaves
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: Spawner
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Spawnable
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: 5891333249580173036}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCount
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCountMultiplier
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequency
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequencyMultiplier
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomness
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomnessMultiplier
+      _node: {fileID: 8252944846887305351}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  Spawner: {fileID: 0}
+  Spawnable: {fileID: 0}
+  waveMode: 0
+  spawnCount: 5
+  spawnCountMultiplier: 1.5
+  spawnFrequency: 0
+  spawnFrequencyMultiplier: 0.9
+  spawnRandomness: 0
+  spawnRandomnessMultiplier: 0.85
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  SubWaves: {fileID: 0}
+  advanceWaveCounter: 1
+  waveCounterMode: 0
+  continueMode: 2
+  waitForItemSpawn: 0
+--- !u!114 &8737119579031365790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cb02d82b2230c48996af5f1dfebbf6, type: 3}
+  m_Name: Wave
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1656, y: 1480}
+  ports:
+    keys:
+    - In
+    - Out
+    - SubWaves
+    - Spawner
+    - Spawnable
+    - spawnCount
+    - spawnCountMultiplier
+    - spawnFrequency
+    - spawnFrequencyMultiplier
+    - spawnRandomness
+    - spawnRandomnessMultiplier
+    values:
+    - _fieldName: In
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: 2726494738724068433}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: In
+        node: {fileID: -271380228524682579}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: SubWaves
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSubNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: Spawner
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnerReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Spawnable
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveSpawnableReferenceNode, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Spawnable
+        node: {fileID: -8111611705767862851}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCount
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnCountMultiplier
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequency
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnFrequencyMultiplier
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomness
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: spawnRandomnessMultiplier
+      _node: {fileID: 8737119579031365790}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _dynamic: 0
+  Spawner: {fileID: 0}
+  Spawnable: {fileID: 0}
+  waveMode: 0
+  spawnCount: 5
+  spawnCountMultiplier: 1.5
+  spawnFrequency: 0
+  spawnFrequencyMultiplier: 0.9
+  spawnRandomness: 0
+  spawnRandomnessMultiplier: 0.85
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  SubWaves: {fileID: 0}
+  advanceWaveCounter: 1
+  waveCounterMode: 0
+  continueMode: 2
+  waitForItemSpawn: 0
+--- !u!114 &8844529392324700821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54785f739c776044b9d2f3f3ba797474, type: 3}
+  m_Name: Wave Delay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680, y: 1848}
+  ports:
+    keys:
+    - In
+    - Out
+    values:
+    - _fieldName: In
+      _node: {fileID: 8844529392324700821}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Out
+        node: {fileID: -2280767031640515603}
+      _direction: 0
+      _dynamic: 0
+    - _fieldName: Out
+      _node: {fileID: 8844529392324700821}
+      _typeQualifiedName: UltimateSpawner.Waves.WaveNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  In: {fileID: 0}
+  Out: {fileID: 0}
+  delay: 2

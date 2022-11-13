@@ -161,7 +161,7 @@ MonoBehaviour:
       _dynamic: 0
   referenceMode: 1
   referenceTag: Boss
-  referenceName: GoblinWarrior
+  referenceName: GoblinWarrior01
   referenceID: 0
   Spawnable: {fileID: 0}
 --- !u!114 &-7695926707073998193

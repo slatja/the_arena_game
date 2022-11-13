@@ -2497,7 +2497,7 @@ MonoBehaviour:
     attackObject: {fileID: 3481177539121680511}
     isHuman: 1
   defaultDamage:
-    damageValue: 35
+    damageValue: 40
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0
